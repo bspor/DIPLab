@@ -4,7 +4,7 @@ package dip.lab1.student.solution1;
  * An implementation sub-class of an Employee. These are low-level classes
  * in the DIP. Does it meet the rules of DIP? If not fix it.
  *
- * @author your name goes here
+ * @bspor
  */
 public class HourlyEmployee extends Employee {
     //This class will caclulate the anual compensation of a hourly employee
@@ -17,7 +17,9 @@ public class HourlyEmployee extends Employee {
         this.hourlyRate = hourlyRate;
         this.totalHrsForYear = totalHrsForYear;
     }
-    
-    
 
+    @Override
+    public double annualCompensation() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
 }

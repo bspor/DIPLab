@@ -18,6 +18,9 @@ public class Startup {
 
         // High-level module --- I am changing this svc to PayEmployeeSvc
         //HRService hr = new HRService(); Ill keep hr as my object name
+        
+        //I tested this way vs the way I left in the code
+        //Is there a preferred method?
 //        PayEmployeeSvc hr = new PayEmployeeSvc(emp1);
 //        PayEmployeeSvc hr1 = new PayEmployeeSvc(emp2);
 //        PayEmployeeSvc hr2 = new PayEmployeeSvc(emp3);

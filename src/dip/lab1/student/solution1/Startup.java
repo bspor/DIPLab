@@ -11,14 +11,6 @@ import java.text.NumberFormat;
 public class Startup {
 
     public static void main(String[] args) {
-//                ////Food SVC calc
-//       TipCalcAbstraction tip = new FoodServiceTipCalculator(ServiceQuality.GOOD, 34.0);
-//        
-//        //Bag calc
-//       //TipCalcAbstraction tip = new BaggageServiceTipCalculator(ServiceQuality.FAIR, 5.0);
-//        TipCalcSvc tipService = new TipCalcSvc(tip);
-//        System.out.println("Your tip is: " + tipService.getTip() + "$.");
-
         //Low-level modules
         Employee emp1 = new HourlyEmployee(10.50, 2020);
         Employee emp2 = new SalariedEmployee(45000, 1250);
@@ -41,5 +33,4 @@ public class Startup {
         System.out.println("Employee 3 annual compensation: " +
             nf.format(hr2.getPayEmployee()));
     }
-
 }

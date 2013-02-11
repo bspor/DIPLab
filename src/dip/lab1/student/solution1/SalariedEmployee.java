@@ -28,6 +28,6 @@ public class SalariedEmployee extends Employee {
 
     @Override
     public double annualCompensation() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return (annualSalary + annualBonus);
     }
 }

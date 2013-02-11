@@ -11,31 +11,35 @@ import java.text.NumberFormat;
 public class Startup {
 
     public static void main(String[] args) {
-        /*
-         * We'll just use this class for testing our ccde.
-         * We'll provide input and get some output...
-         */
+//                ////Food SVC calc
+//       TipCalcAbstraction tip = new FoodServiceTipCalculator(ServiceQuality.GOOD, 34.0);
+//        
+//        //Bag calc
+//       //TipCalcAbstraction tip = new BaggageServiceTipCalculator(ServiceQuality.FAIR, 5.0);
+//        TipCalcSvc tipService = new TipCalcSvc(tip);
+//        System.out.println("Your tip is: " + tipService.getTip() + "$.");
 
         //Low-level modules
-        HourlyEmployee emp1 = new HourlyEmployee(10.50, 2020);
-        SalariedEmployee emp2 = new SalariedEmployee(45000, 1250);
-        SalariedEmployee emp3 = new SalariedEmployee(90000,0);
+        Employee emp1 = new HourlyEmployee(10.50, 2020);
+        Employee emp2 = new SalariedEmployee(45000, 1250);
+        Employee emp3 = new SalariedEmployee(90000,0);
 
-        // High-level module
-        HRService hr = new HRService();
+        // High-level module --- I am changing this svc to PayEmployeeSvc
+        //HRService hr = new HRService(); Ill keep hr as my object name
+        PayEmployeeSvc hr = new PayEmployeeSvc(emp1);
+        PayEmployeeSvc hr1 = new PayEmployeeSvc(emp2);
+        PayEmployeeSvc hr2 = new PayEmployeeSvc(emp3);
 
         // Just utility code to format numbers nice.
         NumberFormat nf = NumberFormat.getCurrencyInstance();
 
         // Test input/output..
         System.out.println("Employee 1 annual compensation: " +
-            nf.format(hr.getAnnualCompensationForEmployee(emp1)));
+            nf.format(hr.getPayEmployee()));
         System.out.println("Employee 2 annual compensation: " +
-            nf.format(hr.getAnnualCompensationForEmployee(emp2)));
+            nf.format(hr1.getPayEmployee()));
         System.out.println("Employee 3 annual compensation: " +
-            nf.format(hr.getAnnualCompensationForEmployee(emp3,
-            HRService.SALARIED_TYPE)));
-        
+            nf.format(hr2.getPayEmployee()));
     }
 
 }

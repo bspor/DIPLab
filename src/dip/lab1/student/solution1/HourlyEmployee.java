@@ -20,6 +20,6 @@ public class HourlyEmployee extends Employee {
 
     @Override
     public double annualCompensation() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return (hourlyRate*totalHrsForYear);
     }
 }

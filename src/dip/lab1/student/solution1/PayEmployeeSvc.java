@@ -8,11 +8,10 @@ public class PayEmployeeSvc {
    //My Service Class
     private Employee payEmployee;
 
-    public PayEmployeeSvc(Employee payEmployee) {
+    public PayEmployeeSvc() {
         this.payEmployee = payEmployee;
     }
-
-    public double getPayEmployee() {
+    public double getPayEmployee(Employee payEmployee) {
         return payEmployee.annualCompensation();
     }
 }

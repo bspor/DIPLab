@@ -18,19 +18,20 @@ public class Startup {
 
         // High-level module --- I am changing this svc to PayEmployeeSvc
         //HRService hr = new HRService(); Ill keep hr as my object name
-        PayEmployeeSvc hr = new PayEmployeeSvc(emp1);
-        PayEmployeeSvc hr1 = new PayEmployeeSvc(emp2);
-        PayEmployeeSvc hr2 = new PayEmployeeSvc(emp3);
+//        PayEmployeeSvc hr = new PayEmployeeSvc(emp1);
+//        PayEmployeeSvc hr1 = new PayEmployeeSvc(emp2);
+//        PayEmployeeSvc hr2 = new PayEmployeeSvc(emp3);
+        PayEmployeeSvc hr = new PayEmployeeSvc();
 
         // Just utility code to format numbers nice.
         NumberFormat nf = NumberFormat.getCurrencyInstance();
 
         // Test input/output..
         System.out.println("Employee 1 annual compensation: " +
-            nf.format(hr.getPayEmployee()));
+            nf.format(hr.getPayEmployee(emp1)));
         System.out.println("Employee 2 annual compensation: " +
-            nf.format(hr1.getPayEmployee()));
+            nf.format(hr.getPayEmployee(emp2)));
         System.out.println("Employee 3 annual compensation: " +
-            nf.format(hr2.getPayEmployee()));
+            nf.format(hr.getPayEmployee(emp3)));
     }
 }
